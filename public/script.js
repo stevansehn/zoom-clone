@@ -1,3 +1,5 @@
+var username = prompt("Enter username:");
+
 const socket = io("/");
 const videoGrid = document.getElementById("video-grid");
 const myVideo = document.createElement("video");
@@ -64,7 +66,8 @@ $("html").keydown((e) => {
 });
 
 socket.on("createMessage", message => {
-    $("ul").append(`<li class="message"><b>user</b><br/>${message}</li>`)
+    // $("ul").append(`<li class="message"><b>user</b><br/>${message}</li>`)
+    $("ul").append(`<li class="message"><b>${username}</b><br/>${message}</li>`);
     scrollToBottom();
 })
 
