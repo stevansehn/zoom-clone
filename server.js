@@ -8,6 +8,7 @@ const peerServer = ExpressPeerServer(server, {
     debug: true
 });
 app.set("view engine", "ejs");
+
 app.use(express.static("public"));
 
 app.use("/peerjs", peerServer);
@@ -31,4 +32,5 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(process.env.PORT||8000);
+// server.listen(process.env.PORT||8000);
+server.listen(8000);

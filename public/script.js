@@ -8,7 +8,8 @@ myVideo.muted = true;
 var peer = new Peer(undefined, {
   path: "/peerjs",
   host: "/",
-  port: "443",
+  // port: "443",
+  port: "8000",
 });
 
 let myVideoStream;
@@ -130,3 +131,39 @@ const setPlayVideo = () => {
   `;
   document.querySelector(".main__video_button").innerHTML = html;
 };
+
+const rollD4 = () => {
+  var d = "jogou d4: ";
+  let roll = Math.floor(Math.random() * 4) + 1;
+  socket.emit("message", d.concat(roll));
+}
+
+const rollD6 = () => {
+  var d = "jogou d6: ";
+  let roll = Math.floor(Math.random() * 6) + 1;
+  socket.emit("message", d.concat(roll));
+}
+
+const rollD8 = () => {
+  var d = "jogou d8: ";
+  let roll = Math.floor(Math.random() * 8) + 1;
+  socket.emit("message", d.concat(roll));
+}
+
+const rollD10 = () => {
+  var d = "jogou d10: ";
+  let roll = Math.floor(Math.random() * 10) + 1;
+  socket.emit("message", d.concat(roll));
+}
+
+const rollD12 = () => {
+  var d = "jogou d12: ";
+  let roll = Math.floor(Math.random() * 12) + 1;
+  socket.emit("message", d.concat(roll));
+}
+
+const rollD20 = () => {
+  var d = "jogou d20: ";
+  let roll = Math.floor(Math.random() * 20) + 1;
+  socket.emit("message", d.concat(roll));
+}

@@ -61,6 +61,27 @@
     font-size: 24px;
 }
 
+
+.main__dice__button {
+    color: #F5F5F5;
+    display: flex;
+    flex-direction: unset;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    min-width: 2px;
+    cursor: pointer;
+}
+
+.main__dice__button:hover {
+    background-color: #343434;
+    border-radius: 5px;
+}
+
+.main__dice__button i {
+    font-size: 24px;
+}
+
 .main__right {
     display: flex;
     flex-direction: column;
