@@ -1,4 +1,4 @@
-var username = prompt("Enter username:");
+var username = prompt("Coloque o nome de usuário:");
 
 const socket = io("/");
 const videoGrid = document.getElementById("video-grid");
@@ -46,7 +46,7 @@ const connectToNewUser = (userId, stream) => {
   call.on("stream", (userVideoStream) => {
     addVideoStream(video, userVideoStream);
   });
-  console.log("new user (userId = " + userId + ") joined the room!");
+  console.log("novo usuário (userId = " + userId + ") entrou na sala!");
 };
 
 function addVideoStream(video, stream) {
@@ -103,7 +103,7 @@ const playStop = () => {
 const setMuteButton = () => {
   const html = `
     <i class="fas fa-microphone"></i>
-    <span>Mute</span>
+    <span>Desl. Mic</span>
   `;
   document.querySelector(".main__mute_button").innerHTML = html;
 };
@@ -111,7 +111,7 @@ const setMuteButton = () => {
 const setUnmuteButton = () => {
   const html = `
     <i class="unmute fas fa-microphone-slash"></i>
-    <span>Unmute</span>
+    <span>Ligar Mic</span>
   `;
   document.querySelector(".main__mute_button").innerHTML = html;
 };
@@ -119,7 +119,7 @@ const setUnmuteButton = () => {
 const setStopVideo = () => {
   const html = `
     <i class="fas fa-video"></i>
-    <span>Stop Video</span>
+    <span>Parar Vídeo</span>
   `;
   document.querySelector(".main__video_button").innerHTML = html;
 };
@@ -127,7 +127,7 @@ const setStopVideo = () => {
 const setPlayVideo = () => {
   const html = `
   <i class="stop fas fa-video-slash"></i>
-    <span>Play Video</span>
+    <span>Iniciar Vídeo</span>
   `;
   document.querySelector(".main__video_button").innerHTML = html;
 };
