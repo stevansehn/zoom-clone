@@ -1,4 +1,4 @@
-var username = prompt("Coloque o nome de usuário:");
+var username = prompt("Nome de usuário:");
 
 const socket = io("/");
 const videoGrid = document.getElementById("video-grid");
@@ -103,7 +103,7 @@ const playStop = () => {
 const setMuteButton = () => {
   const html = `
     <i class="fas fa-microphone"></i>
-    <span>Desl. Mic</span>
+    <span>Desligar Microfone</span>
   `;
   document.querySelector(".main__mute_button").innerHTML = html;
 };
@@ -111,7 +111,7 @@ const setMuteButton = () => {
 const setUnmuteButton = () => {
   const html = `
     <i class="unmute fas fa-microphone-slash"></i>
-    <span>Ligar Mic</span>
+    <span>Ligar Microfone</span>
   `;
   document.querySelector(".main__mute_button").innerHTML = html;
 };
@@ -119,7 +119,7 @@ const setUnmuteButton = () => {
 const setStopVideo = () => {
   const html = `
     <i class="fas fa-video"></i>
-    <span>Parar Vídeo</span>
+    <span>Desligar Câmera</span>
   `;
   document.querySelector(".main__video_button").innerHTML = html;
 };
@@ -127,7 +127,7 @@ const setStopVideo = () => {
 const setPlayVideo = () => {
   const html = `
   <i class="stop fas fa-video-slash"></i>
-    <span>Iniciar Vídeo</span>
+    <span>Ligar Câmera</span>
   `;
   document.querySelector(".main__video_button").innerHTML = html;
 };
